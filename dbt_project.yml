@@ -32,6 +32,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
+  dbt_adw:
+    stagging:
+      sap_adw:
+        +materialized: table
+
+    
   my_new_project: # <-- Name of the project. If you renamed your project you have to change this as well
     
     # Applies to all files under models/example/

@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: sap_adw
+    description: Banco réplica do sap da adventure works
+    schema: sap_adw
+    tables:
+      - name: orders
+        description: Uma linha por pedido. Inclui pedidos cancelados e deletados
+        columns:
+          - name: order_id
+            description: Chave primaria da tabela de ordens.
+            tests:
+              - unique
+              - not_null
+  
+      - name: products
+
+      - name: categories
+
+      - name: suppliers
+
+      - name: shippers
