@@ -1,14 +1,16 @@
+--{{config(materialized='table')}}
 with
     source_salesorderheader as (
         select 
           cast ( salesorderid as int ) as id_pedido			
         , cast ( date(orderdate) as date ) as data_pedido			
-        , cast ( status as string ) as status			
+        , cast ( status as int ) as status			
         , cast ( customerid	as int ) as id_cliente			
         , cast ( territoryid as int ) as id_territorio			
+        , cast ( creditcardid as string ) as id_cartaocredito			
         , cast ( totaldue as numeric ) as total			
-        , cast ( freight as numeric ) as frete		
-        , cast ( subtotal as numeric ) as subtotal			
+--        , cast ( freight as numeric ) as frete		
+--        , cast ( subtotal as numeric ) as subtotal			
 --        , cast ( revisionnumber as string ) as numerorevisao			
 --        , cast ( shipdate as string ) as data_envio			
 --        , cast ( purchaseordernumber as string ) as	numero_ordempedido		
@@ -18,7 +20,6 @@ with
 --        , cast ( billtoaddressid as string ) as id_conta_endereco	
 --        , cast ( shiptoaddressid as string ) as id_envio_endereco			
 --        , cast ( shipmethodid as string ) as id_forma_envio			
---        , cast ( creditcardid as string ) as id_cartaocredito			
 --        , cast ( creditcardapprovalcode as string ) as codigo_aprovacao_cartaocredito			
 --        , cast ( comment as string ) as	comentarios		
 --        , cast ( currencyrateid as string ) as id_cambio_moeda			

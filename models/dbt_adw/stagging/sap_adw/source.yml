@@ -7,4 +7,8 @@ sources:
     tables:
       - name: salesorderheader
         description: Uma linha por pedido. Inclui pedidos cancelados e deletados
+      - name: salesorderdetail
+        description: Uma linha por produto em cada pedido.
+      - name: salesorderheadersalesreason
+        description: Uma linha por pedido listando os motivos das vendas.
   
