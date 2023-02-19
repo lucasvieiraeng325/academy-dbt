@@ -11,4 +11,9 @@ sources:
         description: Uma linha por produto em cada pedido.
       - name: salesorderheadersalesreason
         description: Uma linha por pedido listando os motivos das vendas.
-  
+      - name: salesreason
+        description: Uma linha por pedido listando os motivos das vendas.
+      - name: salesterritory
+        description: Uma linha por pais ou regiao nos EUA.
+      - name: creditcard
+        description: Uma linha por cartao de credito cadastrado. 
