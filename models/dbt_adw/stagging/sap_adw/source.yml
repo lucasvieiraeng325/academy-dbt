@@ -16,4 +16,12 @@ sources:
       - name: salesterritory
         description: Uma linha por pais ou regiao nos EUA.
       - name: creditcard
-        description: Uma linha por cartao de credito cadastrado. 
+        description: Uma linha por cartao de credito cadastrado.
+      - name: personcreditcard
+        description: Uma linha por pessoa com cartao de credito cadastrado.
+      - name: person
+        description: Uma linha por pessoa. 
+      - name: businessentityaddress
+        description: Uma linha por pessoa com id endereço.
+      - name: address
+        description: Uma linha endereço.
