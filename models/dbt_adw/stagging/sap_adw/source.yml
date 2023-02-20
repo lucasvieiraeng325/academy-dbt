@@ -25,3 +25,5 @@ sources:
         description: Uma linha por pessoa com id endereço.
       - name: address
         description: Uma linha endereço.
+      - name: stateprovince
+        description: Uma linha por estado ou provincia.
