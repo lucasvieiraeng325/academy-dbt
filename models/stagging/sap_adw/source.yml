@@ -27,3 +27,5 @@ sources:
         description: Uma linha endereço.
       - name: stateprovince
         description: Uma linha por estado ou provincia.
+      - name: product
+        description: Uma linha por produto.

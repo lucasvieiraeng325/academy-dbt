@@ -8,12 +8,12 @@ with
             , cast ( firstname	as string ) as primeironome				
             , cast ( middlename	as string ) as meionome				
             , cast ( lastname	as string ) as ultimonome			
---            , cast ( suffix	as string ) as sufixo				
---            , cast ( emailpromotion	as int ) as email_promocional 				
---            , cast ( additionalcontactinfo	as string ) as info_contatoadicional			
---            , cast ( demographics as string ) as demografia				
---            , cast ( rowguid as string ) as	rowguid			
---            , cast ( modifieddate	as string ) as data_modificacao	
+            , cast ( suffix	as string ) as sufixo				
+            , cast ( emailpromotion	as int ) as email_promocional 				
+            , cast ( additionalcontactinfo	as string ) as info_contatoadicional			
+            , cast ( demographics as string ) as demografia				
+            , cast ( rowguid as string ) as	rowguid			
+            , cast ( modifieddate	as string ) as data_modificacao	
         from {{ source('sap','person') }}
     )
     

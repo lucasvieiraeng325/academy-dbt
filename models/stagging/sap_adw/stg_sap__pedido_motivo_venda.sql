@@ -3,7 +3,7 @@ with
         select 
               cast ( salesorderid	 as int ) as id_pedido 			
             , cast ( salesreasonid	 as int ) as id_motivo_venda 			
---           , cast ( modifieddate as datetime ) as data_modificacao			
+           , cast ( modifieddate as datetime ) as data_modificacao			
 
         from {{ source('sap','salesorderheadersalesreason') }}
     )
