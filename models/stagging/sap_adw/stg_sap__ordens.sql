@@ -6,8 +6,8 @@ with
         , cast ( status as int ) as status			
         , cast ( customerid	as int ) as id_cliente			
         , cast ( territoryid as int ) as id_territorio			
-        , cast ( creditcardid as string ) as id_cartaocredito			
-        , cast ( totaldue as numeric ) as total			
+        , cast ( creditcardid as int ) as id_cartaocredito			
+        , cast ( totaldue as numeric ) as total_pedido			
         , cast ( freight as numeric ) as frete		
         , cast ( subtotal as numeric ) as subtotal			
         , cast ( revisionnumber as string ) as numerorevisao			
@@ -16,7 +16,7 @@ with
         , cast ( onlineorderflag as string ) as	flag_pedidoonline		
         , cast ( accountnumber as string ) as numero_conta			
         , cast ( salespersonid as string ) as id_vendedor			
-        , cast ( billtoaddressid as string ) as id_conta_endereco	
+        , cast ( billtoaddressid as string ) as id_pedido_endereco	
         , cast ( shiptoaddressid as string ) as id_envio_endereco			
         , cast ( shipmethodid as string ) as id_forma_envio			
         , cast ( creditcardapprovalcode as string ) as codigo_aprovacao_cartaocredito			

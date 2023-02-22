@@ -29,3 +29,7 @@ sources:
         description: Uma linha por estado ou provincia.
       - name: product
         description: Uma linha por produto.
+      - name: customer
+        description: Uma linha por cliente.
+      - name: businessentitycontact
+        description: Uma linha por cliente, relaciona entidadenegocio com pessoa.
