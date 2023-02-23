@@ -33,7 +33,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   stagging:
-    +materialized: view
+    sap_adw:
+      +materialized: view
+      
   marts:
     +materialized: table
     

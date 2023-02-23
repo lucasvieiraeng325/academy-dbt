@@ -1,3 +1,4 @@
+{{ config(materialized='table') }}
 with
     pedidos_motivovenda as (
         select *
