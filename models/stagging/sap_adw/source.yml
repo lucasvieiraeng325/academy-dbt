@@ -7,29 +7,117 @@ sources:
     tables:
       - name: salesorderheader
         description: Uma linha por pedido. Inclui pedidos cancelados e deletados
+        columns:
+          - name: salesorderid
+            description: Chave primaria da tabela de ordens.
+            tests:
+              - unique
+              - not_null        
       - name: salesorderdetail
         description: Uma linha por produto em cada pedido.
+        columns:
+          - name: salesorderdetailid
+            description: Chave primaria da tabela de ordens detalhas.
+            tests:
+              - unique
+              - not_null
+          - name: salesorderid
+            description: Chave estrangeira para a tabela de ordens.
+            tests:
+              - not_null  
       - name: salesorderheadersalesreason
         description: Uma linha por pedido listando os motivos das vendas.
+        columns:
+          - name: salesorderid
+            description: Chave estrangeira para a tabela de ordens.
+            tests:
+              - unique
+              - not_null
       - name: salesreason
         description: Uma linha por pedido listando os motivos das vendas.
+        columns:
+          - name: salesreasonid
+            description: Chave primaria para a tabela de motivo de vendas.
+            tests:
+              - unique
+              - not_null
       - name: salesterritory
-        description: Uma linha por pais ou regiao nos EUA.
+        description: Uma linha por pais ou regiao.
+        columns:
+          - name: territoryid
+            description: Chave primaria para a tabela de territorios.
+            tests:
+              - unique
+              - not_null
       - name: creditcard
         description: Uma linha por cartao de credito cadastrado.
+        columns:
+          - name: creditcardid
+            description: Chave primaria para a tabela de cartao de credito.
+            tests:
+              - unique
+              - not_null
       - name: personcreditcard
         description: Uma linha por pessoa com cartao de credito cadastrado.
+        columns:
+          - name: businessentityid
+            description: Chave primaria para a tabela de pessoas por cartao de credito.
+            tests:
+              - unique
+              - not_null
       - name: person
-        description: Uma linha por pessoa. 
+        description: Uma linha por pessoa.
+        columns:
+          - name: businessentityid
+            description: Chave primaria para a tabela de pessoas.
+            tests:
+              - unique
+              - not_null 
       - name: businessentityaddress
         description: Uma linha por pessoa com id endereço.
+        columns:
+          - name: businessentityid
+            description: Chave primaria para a tabela de pessoas.
+            tests:
+              - unique
+              - not_null 
       - name: address
         description: Uma linha endereço.
+        columns:
+          - name: addressid
+            description: Chave primaria para a tabela de endereco.
+            tests:
+              - unique
+              - not_null 
       - name: stateprovince
         description: Uma linha por estado ou provincia.
+        columns:
+          - name: stateprovinceid
+            description: Chave primaria para a tabela de estados ou provincia.
+            tests:
+              - unique
+              - not_null 
       - name: product
         description: Uma linha por produto.
+        columns:
+          - name: productid
+            description: Chave primaria para a tabela de produtos.
+            tests:
+              - unique
+              - not_null
       - name: customer
         description: Uma linha por cliente.
+        columns:
+          - name: customerid
+            description: Chave primaria para a tabela de clientes.
+            tests:
+              - unique
+              - not_null
       - name: businessentitycontact
         description: Uma linha por cliente, relaciona entidadenegocio com pessoa.
+        columns:
+          - name: businessentityid
+            description: Chave primaria para a tabela.
+            tests:
+              - unique
+              - not_null

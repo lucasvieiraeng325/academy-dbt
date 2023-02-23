@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: fct_pedidos
+    description: Tabela com os fatos de vendas da adventure works
+    columns:
+      - name: id_ordem_detalhada
+        description: Primary Key da tabela com os fatos de vendas detalhadas da adventure works
+        tests:
+          - unique
+          - not_null
+      - name: id_pedido
+        description: Foreing Key da tabela com os fatos de vendas da adventure works
+        tests:
+          - not_null
+      - name: id_produto
+        description: Foreing Key da tabela com os produtos da adventure works
+        tests:
+          - not_null
+      - name: id_pedido_endereco
+        description: Foreing Key da tabela com os endercos da adventure works
+        tests:
+          - not_null
+      - name: id_cartaocredito
+        description: Foreing Key da tabela com os cartoes de credito da adventure works
+        tests:
+          - not_null
+      - name: id_cliente
+        description: Foreing Key da tabela com os clientes da adventure works
+        tests:
+          - not_null
+        
