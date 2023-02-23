@@ -18,14 +18,13 @@ with
     )
     , uniao_tabelas as (
         select
-             clientes.id_cliente			
-            , pessoas.primeironome			
-            , pessoas.ultimonome
+              clientes.id_cliente			
+            , pessoas.primeironome || " " ||pessoas.ultimonome as cliente_nome		
             , clientes.id_pessoa
             , territorio.nome_territorio
             , territorio.pais			    
         from clientes
-        left join pessoas on clientes.id_pessoa = pessoas.id_entidadenegocio
+        inner join pessoas on clientes.id_pessoa = pessoas.id_entidadenegocio
         left join territorio on clientes.id_territorio = territorio.id_territorio
     )        
 select *
